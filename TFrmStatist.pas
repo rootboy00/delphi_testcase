@@ -27,6 +27,7 @@ type
     procedure RegisterCheckBox2Click(Sender: TObject);
     procedure OnCellClickSearchGrid(Column: TColumn); Override;
     procedure Searching; override;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -39,6 +40,11 @@ var
 implementation
  uses Main;
 {$R *.dfm}
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action:=caFree;
+end;
 
 procedure TForm2.OnCellClickSearchGrid(Column: TColumn);
 var PeopleId:integer;

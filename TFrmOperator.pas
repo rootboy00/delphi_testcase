@@ -49,6 +49,7 @@ type
     procedure OnCellClickSearchGrid(Column: TColumn); override;
     procedure ShowCertificate(Query:TFDQuery);
     procedure LastNameDBGridCellClick(Column: TColumn);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -156,6 +157,11 @@ begin
 end;
 
 
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action:=caFree;
+end;
 
 procedure TForm3.AddPeopleButton(Sender: TObject);
 var tablelist,paramlist:string;

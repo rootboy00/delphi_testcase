@@ -62,6 +62,7 @@ begin
     begin
       Query.ExecSQL;
     end;
+    Query.Transaction.Commit;
     if(SuccStr <> '') then showmessage(SuccStr);
 
     for I := 0 to Query.sql.Count-1 do

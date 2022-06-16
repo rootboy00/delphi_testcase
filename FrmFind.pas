@@ -19,6 +19,7 @@ type
     procedure SearchButtonClick(Sender: TObject);
     procedure OnCellClickSearchGrid(Column: TColumn); Virtual; abstract;
     procedure Searching; virtual;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -33,6 +34,11 @@ implementation
 Uses Main;
 
 {$R *.dfm}
+
+procedure TForm4.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action:=caFree;
+end;
 
 procedure TForm4.SearchButtonClick(Sender: TObject);
 begin

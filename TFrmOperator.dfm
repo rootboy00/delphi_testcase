@@ -13,6 +13,7 @@
   OldCreateOrder = False
   Position = poOwnerFormCenter
   PrintScale = poNone
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox3: TGroupBox
